@@ -13,6 +13,8 @@ public class VirtualPet {
 	protected int play = 50;
 	protected int bored = 50;
 	protected int clean = 25;
+	protected int soil = 50;
+	protected int treat = 1;
 	protected int adopt = 1;
 	protected int admit = 1;
 
@@ -44,6 +46,10 @@ public class VirtualPet {
 		return this.hunger;
 	}
 	
+	public int getUserPetTreat() {
+		return this.treat;
+	}
+	
 	public int getUserPetThirst() {
 		return this.thirst;
 	}
@@ -60,8 +66,16 @@ public class VirtualPet {
 		return this.clean;
 	}
 	
+	public int getUserPetSoil() {
+		return this.soil;
+	}
+	
 	public boolean isHungry() {
 		return hunger <= 50;
+	}
+	
+	public boolean isTreat() {
+		return treat == 1;
 	}
 	
 	public boolean isFull() {

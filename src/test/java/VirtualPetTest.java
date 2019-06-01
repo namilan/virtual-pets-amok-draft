@@ -39,6 +39,12 @@ public class VirtualPetTest {
 	}
 	
 	@Test
+	public void doesUserPetTreatGetterWork() {
+		underTest.treat = 1;
+		assertEquals(1, underTest.getUserPetTreat());
+	}
+	
+	@Test
 	public void doesUserPetThirstGetterWork() {
 		underTest.thirst = 50;
 		assertEquals(50, underTest.getUserPetThirst());
@@ -62,10 +68,22 @@ public class VirtualPetTest {
 		assertEquals(25, underTest.getUserPetClean());
 	}
 	
+	@Test 
+	public void doesUserPetSoilGetterWork() {
+		underTest.soil = 50;
+		assertEquals(50, underTest.getUserPetSoil());
+	}
+	
 	@Test
 	public void isHungryMethodWorking_ShouldReturnTrue() {
 		underTest.hunger = 50;
 		assertTrue(underTest.isHungry());
+	}
+	
+	@Test
+	public void isTreatMethodWorking_ShouldReturnTrue() {
+		underTest.treat = 1;
+		assertTrue(underTest.isTreat());
 	}
 	
 	@Test
@@ -112,13 +130,13 @@ public class VirtualPetTest {
 	
 	@Test
 	public void isPetCageCleanMethodWorking_ShouldReturnTrue() {
-		underTest.clean = 100;
+		underTest.clean = 25;
 		assertTrue(underTest.isClean());
 	}
 	
 	@Test
 	public void isPetCageDirtyMethodWorking_ShouldReturnTrue() {
-		underTest.clean = 100;
+		underTest.clean = 25;
 		assertTrue(underTest.isNotClean());
 	}
 	
