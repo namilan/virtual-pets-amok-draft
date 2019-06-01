@@ -7,11 +7,10 @@ public class VirtualPetRobots {
 	
 	protected String robotName = "";
 	protected String robotType = "";
-	protected int robotMaintenance = 0;
-	protected int robotOil = 0;
-	protected int robotHappiness = 0; 
-	protected int robotBored = 0;
-	protected int robotClean = 0;
+	protected int robotMaintenance = 23;
+	protected int robotOil = 50;
+	protected int robotHappiness = 50; 
+	protected int robotBored = 50;
 	protected int robotAdopt = 1; 
 	protected int robotAdmit = 1;
 	
@@ -35,35 +34,35 @@ public class VirtualPetRobots {
 	}
 	
 	public int getUserRobotMaintenance() {
-		return robotMaintenance = 0;
+		return robotMaintenance = 23;
 	}
 	
 	public int getUserRobotOil() {
-		return robotOil = 0; 		
+		return robotOil = 50; 		
 	}
 	
 	public int getUserRobotHappiness() {
-		return robotHappiness = 0;
+		return robotHappiness = 50;
 	}
 	
 	public int getUserRobotBored() {
-		return robotBored = 0;
+		return robotBored = 50;
 	}
 	
 	public boolean robotOil() {
-		return robotOil == 0;
+		return robotOil == 50;
 	}
 	
 	public boolean robotMaintenance() {
-		return robotMaintenance == 0;
+		return robotMaintenance == 23;
 	}
 	
 	public boolean robotHappiness() {
-		return robotHappiness == 0;		
+		return robotHappiness == 50;		
 	}
 	
 	public boolean robotBored() {
-		return robotBored == 0;
+		return robotBored == 50;
 	}
 	
 	public boolean robotAdopt() {

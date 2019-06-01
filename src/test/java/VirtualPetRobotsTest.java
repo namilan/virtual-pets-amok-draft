@@ -28,53 +28,53 @@ public class VirtualPetRobotsTest {
 
 		@Test
 		public void getUserRobotMaintenanceGetterWork() {
-			int userRobotMaintenance = 0;
+			int userRobotMaintenance = 23;
 			underTest.robotMaintenance = userRobotMaintenance;
-			assertEquals( 0 , underTest.getUserRobotMaintenance());
+			assertEquals(23, underTest.getUserRobotMaintenance());
 		}
 		
 		@Test
 		public void getUserRobotOilGetterWork() {
-			int userRobotOil = 0;
+			int userRobotOil = 50;
 			underTest.robotOil = userRobotOil;
-			assertEquals( 0 , underTest.getUserRobotOil());
+			assertEquals(50, underTest.getUserRobotOil());
 		}
 		
 		@Test
 		public void getUserRobotHappinessGetterWork() {
-			int userRobotHappiness = 0;
+			int userRobotHappiness = 50;
 			underTest.robotHappiness = userRobotHappiness;
-			assertEquals( 0 , underTest.getUserRobotHappiness());
+			assertEquals(50, underTest.getUserRobotHappiness());
 		}
 		
 		@Test
 		public void getUserRobotBorderGetterWork() {
-			int userRobotBored = 0;
+			int userRobotBored = 50;
 			underTest.robotBored = userRobotBored;
-			assertEquals( 0 , underTest.getUserRobotBored());
+			assertEquals(50, underTest.getUserRobotBored());
 		}
 		
 		@Test
 		public void isRobotMaintenanceWorking_ShouldReturnTrue() {
-			underTest.robotMaintenance = 0;
+			underTest.robotMaintenance = 23;
 			assertTrue(underTest.robotMaintenance());
 		}
 		
 		@Test 
 		public void isRobotOilWorking_ShouldReturnTrue() {
-			underTest.robotOil = 0;
+			underTest.robotOil = 50;
 			assertTrue(underTest.robotOil());
 		}
 		
 		@Test
 		public void isRobotHappinessWorking_ShouldReturnTrue() {
-			underTest.robotHappiness = 0;
+			underTest.robotHappiness = 50;
 			assertTrue(underTest.robotHappiness());
 		}
 		
 		@Test
 		public void isRobotBoredWorking_ShouldReturnTrue() {
-			underTest.robotBored = 0;
+			underTest.robotBored = 50;
 			assertTrue(underTest.robotBored());
 		}
 		
@@ -92,30 +92,30 @@ public class VirtualPetRobotsTest {
 		
 		@Test
 		public void isRobotMaintenanceTickWorking() {
-			underTest.robotMaintenance = 0;
+			underTest.robotMaintenance = 23;
 			underTest.getUserRobotMaintenance();
-			assertEquals(0, underTest.getUserRobotMaintenance());
+			assertEquals(23, underTest.getUserRobotMaintenance());
 		}
 		
 		@Test
 		public void isRobotOilTickWorking() {
-			underTest.robotOil = 0;
+			underTest.robotOil = 50;
 			underTest.getUserRobotOil();
-			assertEquals(0, underTest.getUserRobotOil());
+			assertEquals(50, underTest.getUserRobotOil());
 		}
 		
 		@Test
 		public void isRobotHappinessTickWorking() {
-			underTest.robotHappiness = 0;
+			underTest.robotHappiness = 50;
 			underTest.getUserRobotHappiness();
-			assertEquals(0, underTest.getUserRobotHappiness());
+			assertEquals(50, underTest.getUserRobotHappiness());
 		}
 		
 		@Test
 		public void isRobotBoredTickWorking() {
-			underTest.robotBored = 0;
+			underTest.robotBored = 50;
 			underTest.getUserRobotBored();
-			assertEquals(0, underTest.getUserRobotBored());
+			assertEquals(50, underTest.getUserRobotBored());
 		}
 
 
