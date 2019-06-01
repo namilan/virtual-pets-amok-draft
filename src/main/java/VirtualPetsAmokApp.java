@@ -19,6 +19,14 @@ public class VirtualPetsAmokApp {
 		petsInPlayhouse.add(spike);
 		VirtualPet ducky = new VirtualPet("Ducky", "Saurolophus", 50, 50, 50, 50, 100);
 		petsInPlayhouse.add(ducky);
+		VirtualPet roofus = new VirtualPet("Roofus", "Dog", 50, 50, 50, 50, 100);
+		petsInPlayhouse.add(roofus);
+		VirtualPet kitty = new VirtualPet("Kitty", "Cat", 50, 50, 50, 50, 100);
+		petsInPlayhouse.add(kitty);
+		VirtualPet bork = new VirtualPet("Bork", "Robot Dog", 50, 50, 50, 50, 100);
+		petsInPlayhouse.add(bork);
+		VirtualPet cookies = new VirtualPet("Cookies", "Robot Cat", 50, 50, 50, 50, 100);
+		petsInPlayhouse.add(cookies);
 		
 	
 	do {

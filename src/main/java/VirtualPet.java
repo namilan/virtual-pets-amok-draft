@@ -27,6 +27,7 @@ public class VirtualPet {
 		
 	}
 	
+	
 	public String getUserPetName() {
 		return this.name;
 	}
