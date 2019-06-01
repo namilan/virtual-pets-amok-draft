@@ -80,8 +80,32 @@ public class VirtualPetRobots {
 	//Tick Method
 	public void tick() {
 		robotMaintenance += (1 + generateRandom());
-		robotOil += (1 + generateRandom());
+		robotOil -= (1 + generateRandom());
 		robotHappiness += (1 + generateRandom());
 		robotBored += (1 + generateRandom());
+	}
+	
+	//Tick Method Reset
+	public void tickReset() {
+		robotMaintenance = 23;
+		robotOil = 50;
+		robotHappiness = 50;
+		robotBored = 50;
+	}
+	
+	boolean isRobotAlive() {
+		if ( robotOil == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	boolean isRobotBored() {
+		if ( robotBored >= 100) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

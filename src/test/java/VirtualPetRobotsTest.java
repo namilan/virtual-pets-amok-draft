@@ -117,6 +117,34 @@ public class VirtualPetRobotsTest {
 			underTest.getUserRobotBored();
 			assertEquals(50, underTest.getUserRobotBored());
 		}
+		
+		@Test
+		public void isRobotMaintenanceTickResetWorking() {
+			underTest.robotMaintenance = 23;
+			underTest.getUserRobotMaintenance();
+			assertEquals(23, underTest.getUserRobotMaintenance());
+		}
+		
+		@Test
+		public void isRobotOilLevelTickResetWorking() {
+			underTest.robotOil = 50;
+			underTest.getUserRobotOil();
+			assertEquals(50, underTest.getUserRobotOil());
+		}
+		
+		@Test
+		public void isRobotHappinessTickResetWorking() {
+			underTest.robotHappiness = 50;
+			underTest.getUserRobotHappiness();
+			assertEquals(50, underTest.getUserRobotHappiness());
+		}
+		
+		@Test
+		public void isRobotBoredTickResetWorking() {
+			underTest.robotBored = 50;
+			underTest.getUserRobotBored();
+			assertEquals(50, underTest.getUserRobotBored());
+		}
 
 
 }

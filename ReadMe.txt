@@ -31,7 +31,38 @@ Added treat to VP & VPTest
 	* return.treat
 	* added isPetTreatGetterWorking to VPTest
 	* set value == 1 in VP
-
-
+Added isLitterBoxClean()
+	* returning litterBox == 25
+Added isLitterBoxDirty()
+	* returning litterBox <= 25
+Added getUserCatLitterBox()
+	* returning litterBox
+Added litterBox
+	* set Value = 25 for clean
+	* if litterBox hits 100, the cat will soil
+	  it's cage
+Removed Clean from isAlive
+	* moved to isSoiled
+Added isSoiled method
+	* Created a " pet soiled the cage " string
+	* added clean & litter box into this method
+Added tickRestLitterBox() to VPTest
+Added isLitterBoxTicking() to VPTest
+**** checked testing and all is green and works ****
+Added Tick Method Reset to VRPets
+	* maintenance = 23
+	* oil = 50
+	* happiness = 50
+	* bored = 50
+Added Tick Method Reset to VRPTest
+	* maintenance
+	* oil
+	* happiness
+	* bored
+Added isRobotAlive()
+	* if robot hits 0, then robot powers down. 
+Added is RobotBored
+	* if robot hits 100, then robot breaks out of 
+	  cage and rips up all papers in the office. 
 
 

@@ -74,6 +74,11 @@ public class VirtualPetTest {
 		assertEquals(50, underTest.getUserPetSoil());
 	}
 	
+	public void doesUserLitterBoxGetterWork() {
+		underTest.litterBox = 25;
+		assertEquals(25, underTest.getUserCatLitterBox());
+	}
+	
 	@Test
 	public void isHungryMethodWorking_ShouldReturnTrue() {
 		underTest.hunger = 50;
@@ -141,6 +146,18 @@ public class VirtualPetTest {
 	}
 	
 	@Test
+	public void isLitterBoxCLean() {
+		underTest.litterBox = 25;
+		assertTrue(underTest.isClean());
+	}
+	
+	@Test
+	public void isLitterBoxNotClean() {
+		underTest.litterBox = 25;
+		assertTrue(underTest.isNotClean());
+	}
+	
+	@Test
 	public void isPetGettingAdopted_ShouldReturnTrue() {
 		underTest.adopt = 1;
 		assertTrue(underTest.isAdopted());
@@ -188,6 +205,13 @@ public class VirtualPetTest {
 	}
 	
 	@Test
+	public void isLitterBoxTicking() {
+		underTest.clean = 25;
+		underTest.getUserCatLitterBox();
+		assertEquals(25, underTest.getUserCatLitterBox());
+	}
+	
+	@Test
 	public void tickResetHunger() {
 		underTest.hunger = 50;
 		underTest.getUserPetHunger();
@@ -220,6 +244,13 @@ public class VirtualPetTest {
 		underTest.clean = 50;
 		underTest.getUserPetClean();
 		assertEquals(50, underTest.getUserPetClean());
+	}
+	
+	@Test
+	public void tickResetLitterBox() {
+		underTest.litterBox = 25;
+		underTest.getUserCatLitterBox();
+		assertEquals(25, underTest.getUserCatLitterBox());
 	}
 	
 

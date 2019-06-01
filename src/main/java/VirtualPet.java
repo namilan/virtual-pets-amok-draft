@@ -14,6 +14,7 @@ public class VirtualPet {
 	protected int bored = 50;
 	protected int clean = 25;
 	protected int soil = 50;
+	protected int litterBox = 25;
 	protected int treat = 1;
 	protected int adopt = 1;
 	protected int admit = 1;
@@ -70,6 +71,10 @@ public class VirtualPet {
 		return this.soil;
 	}
 	
+	public int getUserCatLitterBox() {
+		return this.litterBox;
+	}
+	
 	public boolean isHungry() {
 		return hunger <= 50;
 	}
@@ -114,6 +119,14 @@ public class VirtualPet {
 		return clean <=25;
 	}
 	
+	public boolean isLitterBoxClean() {
+		return litterBox == 25;
+	}
+	
+	public boolean isLitterBoxNotClean() {
+		return litterBox <=25;
+	}
+	
 	public boolean isAdopted() {
 		return adopt <=1;
 	}
@@ -139,6 +152,7 @@ public class VirtualPet {
 	play -= (1 + generateRandom());
 	bored += (1 + generateRandom());
 	clean += (1 + generateRandom());
+	litterBox += (3 + generateRandom());
 	}
 	
 	//Tick Rest
@@ -148,6 +162,7 @@ public class VirtualPet {
 		play = 50;
 		bored = 50;
 		clean = 50;
+		litterBox = 25;
 	}
 
 	public Collection<VirtualPet> values() {
@@ -156,11 +171,19 @@ public class VirtualPet {
 	}
 	
 	boolean isAlive() {
-		if(hunger < 100 && bored < 100 && thirst < 100 && clean < 100) {
+		if(hunger < 100 && bored < 100 && thirst < 100 ) {
 			return true;
 		} else {
 			return false;
 		}
 		
+	}
+	
+	boolean isSoiled() {
+		if (clean < 100 && litterBox < 100 ) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
