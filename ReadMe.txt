@@ -138,3 +138,9 @@ Added isRobotNeedingOil to VPRobots
 	* >= 50
 Added isRobotNotNeedingOil to VPRobots
 	* <= 50
+Changed my case numbers for my menu's in VPAmok
+Added makeAllRoboPetsTickOilReset in VPShelter
+	* .tickResetOil
+Added tickResetOil in VPRobots
+	* reset = 100 ( full amount )
+

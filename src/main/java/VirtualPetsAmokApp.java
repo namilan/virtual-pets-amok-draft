@@ -130,7 +130,7 @@ public class VirtualPetsAmokApp {
 				roboInPlayhouse.makeAllRoboPetsTick();
 			}
 		break;
-		case 7:
+		case 9:
 			if(ronnysPlayHouse.isNeedingPlay()) {
 				System.out.println("You played with all your pets!");
 				ronnysPlayHouse.makeAllPetsTick();
@@ -140,7 +140,7 @@ public class VirtualPetsAmokApp {
 			}
 			
 		break;
-		case 8:
+		case 10:
 				System.out.println("Please choose a pet that you would like to adopt?");
 				ronnysPlayHouse.printAllPetNames();
 				System.out.println("Please enter their name here. ");
@@ -151,7 +151,7 @@ public class VirtualPetsAmokApp {
 				System.out.println("Remaining pets in the shelter as follows:");
 				ronnysPlayHouse.printAllPetNames();
 		break;
-		case 9:
+		case 11:
 				System.out.println("Please provide the name of the pet to admit today.");
 				input.nextLine();
 				String name = input.nextLine();
@@ -160,7 +160,7 @@ public class VirtualPetsAmokApp {
 				ronnysPlayHouse.admitPetByName(name, type);
 				System.out.println("We will take great care of your critter.");
 		break;
-		case 10:
+		case 12:
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
 		
