@@ -54,18 +54,19 @@ public class VirtualPetsAmokApp {
 		}
 		System.out.println("");
 		System.out.println("Here are some options for you!");
-		System.out.println("1: Would you like to feed the organic pets?");
+		System.out.println("1: Would you like to feed the fluffy pets?");
 		System.out.println("2: Would you like to oil the robot pets?");
-		System.out.println("3: Would you like to water all the organic pets?");
-		System.out.println("4: Would you like to clean the organic dog cages?");
+		System.out.println("3: Would you like to water all the fluffy pets?");
+		System.out.println("4: Would you like to clean the fluffy dog cages?");
 		System.out.println("5: Would you like the clean the kitty litter boxes?");
 		System.out.println("6: Would you like to provide maintenance for your robot pets?");
 		System.out.println("7: Would you like to walk the dogs?");
 		System.out.println("8: Which pet would you like to give a treat to?");
 		System.out.println("9: Which pet would you like to play with?");
 		System.out.println("10: Which pet would you like to adopt?");
-		System.out.println("11: Would you like to admit a pet?");
-		System.out.println("12: Quit. ");
+		System.out.println("11: Would you like to admit a fluffy pet?");
+		System.out.println("12: Would you like to admit a robot pet?");
+		System.out.println("13: Quit. ");
 		
 		int userInput = input.nextInt();
 		
@@ -155,17 +156,17 @@ public class VirtualPetsAmokApp {
 //				System.out.println("They didn't want a treat? First time for everything.");
 //				ronnysPlayHouse.makeAllPetsTick();
 //			}
-		case 9:
-			if(ronnysPlayHouse.isNeedingPlay()) {
-				System.out.println("You played with all your pets!");
-				ronnysPlayHouse.makeAllPetBoredReset();
-				ronnysPlayHouse.makeAllPetsTick();
-			} else {
-				System.out.println("They didn't want to play afterall.");
-				ronnysPlayHouse.makeAllPetsTick();
-			}
-			
-		break;
+//		case 9:
+//			if(ronnysPlayHouse.isNeedingPlay()) {
+//				System.out.println("You played with all your pets!");
+//				ronnysPlayHouse.makeAllPetBoredReset();
+//				ronnysPlayHouse.makeAllPetsTick();
+//			} else {
+//				System.out.println("They didn't want to play afterall.");
+//				ronnysPlayHouse.makeAllPetsTick();
+//			}
+//			
+//		break;
 		case 10:
 				System.out.println("Please choose a pet that you would like to adopt?");
 				ronnysPlayHouse.printAllPetNames();
@@ -192,6 +193,14 @@ public class VirtualPetsAmokApp {
 				System.out.println("We will take great care of your floofs.");
 		break;
 		case 12:
+				System.out.println("Do you have a robot pet you would like to admit today?");
+				System.out.println("If so, what is their name?");
+				input.nextLine();
+				String robotName = input.nextLine();
+				roboInPlayhouse.admitPetByRobotName(robotName);
+				System.out.println("We will take great care of your little robot.");
+		break;
+		case 13:
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
 		

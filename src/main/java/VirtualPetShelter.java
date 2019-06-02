@@ -94,6 +94,15 @@ public class VirtualPetShelter {
 		this.virtualPets.add(newPet);
 		}
 	
+	public boolean isAdmitRobot(VirtualPetRobots pet) {
+		return this.robotPets.add(pet);
+	}
+	
+	public void admitPetByRobotName(String robotName) {
+		VirtualPetRobots newPets = new VirtualPetRobots( robotName, " " , 23, 50, 50, 50);
+		this.robotPets.add(newPets);
+	}
+	
 	public boolean areThePetsHungry() {
 		for (VirtualPet currentPet : getVirtualPets()) {
 			if(currentPet.isHungry() == true) {
