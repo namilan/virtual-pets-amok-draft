@@ -130,6 +130,17 @@ public class VirtualPetsAmokApp {
 				roboInPlayhouse.makeAllRoboPetsTick();
 			}
 		break;
+		case 7:
+			if(ronnysPlayHouse.areDogsNeedingWalked()) {
+				System.out.println("Let's take the floof dogs for a walk!");
+				System.out.println("Doggos enjoyed the walk! Nice job!");
+				ronnysPlayHouse.makeAllPetTickCleanReset();
+				ronnysPlayHouse.makeAllPetsTick();
+			} else {
+				System.out.println("They're pooped. They don't need a walk.");
+				ronnysPlayHouse.makeAllPetsTick();
+			}
+		break;
 		case 9:
 			if(ronnysPlayHouse.isNeedingPlay()) {
 				System.out.println("You played with all your pets!");

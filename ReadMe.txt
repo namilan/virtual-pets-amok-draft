@@ -143,4 +143,11 @@ Added makeAllRoboPetsTickOilReset in VPShelter
 	* .tickResetOil
 Added tickResetOil in VPRobots
 	* reset = 100 ( full amount )
+Added areDogsNeedingWalked to VPShelter
+	* made the makeAllPetTickCleanReset for the tick
+	  result, due to dog being outside and cage gets
+	  automatically cleaned. 
+Added sout line to case 7: in VPAmok
+	* "Lets take the floof dogs for a walk!"
+	* "Doggos enjoyed the walk! Good job!"
 

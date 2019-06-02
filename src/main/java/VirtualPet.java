@@ -163,10 +163,10 @@ public class VirtualPet {
 	hunger += (1 + generateRandom());
 	thirst += (1 + generateRandom());
 	play -= (1 + generateRandom());
-	bored += (1 + generateRandom());
+	bored -= (1 + generateRandom());
 	clean += (4 + generateRandom());
 	catLitterBox += (3 + generateRandom());
-	walkDog += (3 + generateRandom());
+	walkDog -= (3 + generateRandom());
 	}
 	
 	//Tick Rest

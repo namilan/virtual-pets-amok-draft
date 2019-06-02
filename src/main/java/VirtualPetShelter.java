@@ -100,6 +100,15 @@ public class VirtualPetShelter {
 		return false;
 	}
 	
+	public boolean areDogsNeedingWalked() {
+		for (VirtualPet currentPets : getVirtualPets()) {
+			if(currentPets.isDogNeedingWalked() == true) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public boolean isNeedingPlay() {
 		for (VirtualPet currentPet : getVirtualPets()) {
 			if(currentPet.isNeedingPlay() == true) {
@@ -140,6 +149,15 @@ public class VirtualPetShelter {
 	public boolean isPetClean() {
 		for (VirtualPet currentPet : getVirtualPets()) {
 			if(currentPet.isClean() == true) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean makeDogsWalkTickReset() {
+		for (VirtualPet currentPet : getVirtualPets()) {
+			if(currentPet.isDogNeedingWalked() == true) {
 				return true;
 			}
 		}
