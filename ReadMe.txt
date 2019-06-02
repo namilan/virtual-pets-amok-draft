@@ -130,4 +130,11 @@ Added tick reset for LitterBox clean
 	* reset = 0
 Added tick reset for clean dog cages under "clean"
 	* reset = 0
-
+Added robotNeedingMaint to VPRobots
+	* >= 23
+Added robotNotNeedingMaint to VPRobots
+	* <= 23
+Added isRobotNeedingOil to VPRobots
+	* >= 50
+Added isRobotNotNeedingOil to VPRobots
+	* <= 50

@@ -50,11 +50,19 @@ public class VirtualPetRobots {
 	}
 	
 	public boolean robotOil() {
-		return robotOil == 50;
+		return robotOil >= 50;
 	}
 	
+	public boolean isRobotNotNeedingOil() {
+		return robotOil <=50;
+	}
+		
 	public boolean robotMaintenance() {
-		return robotMaintenance == 23;
+		return robotMaintenance >= 23;
+	}
+	
+	public boolean robotNotNeedingMaint() {
+		return robotMaintenance <= 23;
 	}
 	
 	public boolean robotHappiness() {
@@ -84,21 +92,22 @@ public class VirtualPetRobots {
 	//Tick Method
 	public void tick() {
 		robotMaintenance += (1 + generateRandom());
-		robotOil += (1 + generateRandom());
+		robotOil -= (1 + generateRandom());
 		robotHappiness += (1 + generateRandom());
 		robotBored += (1 + generateRandom());
 	}
 	
 	//Tick Method Reset
-	public void tickReset() {
+	public void tickResetOil() {
+		robotOil = 100;
+	}
+	
+	public void tickRoboMaint() {
 		robotMaintenance = 0;
-		robotOil = 0;
-		robotHappiness = 50;
-		robotBored = 0;
 	}
 	
 	boolean isRobotAlive() {
-		if ( robotOil == 0) {
+		if ( robotOil == 100) {
 			return true;
 		} else {
 			return false;

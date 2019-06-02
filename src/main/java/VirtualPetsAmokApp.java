@@ -60,12 +60,12 @@ public class VirtualPetsAmokApp {
 		System.out.println("4: Would you like to clean the organic dog cages?");
 		System.out.println("5: Would you like the clean the kitty litter boxes?");
 		System.out.println("6: Would you like to provide maintenance for your robot pets?");
-		System.out.println("5: Would you like to walk the dogs?");
-		System.out.println("6: Which pet would you like to give a treat to?");
-		System.out.println("7: Which pet would you like to play with?");
-		System.out.println("8: Which pet would you like to adopt?");
-		System.out.println("9: Would you like to admit a pet?");
-		System.out.println("10: Quit. ");
+		System.out.println("7: Would you like to walk the dogs?");
+		System.out.println("8: Which pet would you like to give a treat to?");
+		System.out.println("9: Which pet would you like to play with?");
+		System.out.println("10: Which pet would you like to adopt?");
+		System.out.println("11: Would you like to admit a pet?");
+		System.out.println("12: Quit. ");
 		
 		int userInput = input.nextInt();
 		
@@ -83,7 +83,7 @@ public class VirtualPetsAmokApp {
 		case 2: 
 			if (roboInPlayhouse.areRobotsNeedingOil()) {
 				System.out.println("You oiled your robots");
-				roboInPlayhouse.makeAllRoboPetsTickReset();
+				roboInPlayhouse.makeAllRoboPetsTickOilReset();
 				roboInPlayhouse.makeAllRoboPetsTick();
 			} else {
 				System.out.println("No Oil Needed.");
@@ -118,6 +118,16 @@ public class VirtualPetsAmokApp {
 			} else {
 				System.out.println("Kitty litter is clean!");
 				ronnysPlayHouse.makeAllPetsTick();
+			}
+		break;
+		case 6:
+			if(roboInPlayhouse.areRobotsNeedingMaintenance()) {
+				System.out.println("Robots are Perfect!");
+				roboInPlayhouse.makeRoboMaintenanceReset();
+				roboInPlayhouse.makeAllRoboPetsTick();
+			} else {
+				System.out.println("Robots are already perfect!");
+				roboInPlayhouse.makeAllRoboPetsTick();
 			}
 		break;
 		case 7:

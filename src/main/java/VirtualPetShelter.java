@@ -91,6 +91,15 @@ public class VirtualPetShelter {
 		return false;
 	}
 	
+	public boolean areRobotsNeedingMaintenance() {
+		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+			if(currentPets.robotMaintenance() == true) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public boolean isNeedingPlay() {
 		for (VirtualPet currentPet : getVirtualPets()) {
 			if(currentPet.isNeedingPlay() == true) {
@@ -173,9 +182,15 @@ public class VirtualPetShelter {
 			}
 	}
 	
-	public void makeAllRoboPetsTickReset() {
+	public void makeAllRoboPetsTickOilReset() {
 		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
-			currentPets.tickReset();
+			currentPets.tickResetOil();
+		}
+	}
+	
+	public void makeRoboMaintenanceReset() {
+		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+			currentPets.tickRoboMaint();
 		}
 	}
 	
