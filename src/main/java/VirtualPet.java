@@ -163,7 +163,7 @@ public class VirtualPet {
 	hunger += (1 + generateRandom());
 	thirst += (1 + generateRandom());
 	play -= (1 + generateRandom());
-	bored -= (1 + generateRandom());
+	bored += (1 + generateRandom());
 	clean += (4 + generateRandom());
 	catLitterBox += (3 + generateRandom());
 	walkDog -= (3 + generateRandom());
@@ -184,6 +184,10 @@ public class VirtualPet {
 	
 	public void resetCleanLitter() {
 		catLitterBox = 0;
+	}
+	
+	public void resetBored() {
+		bored = 0;
 	}
 
 	public Collection<VirtualPet> values() {

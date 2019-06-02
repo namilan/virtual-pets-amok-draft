@@ -35,14 +35,30 @@ public class VirtualPetShelter {
 	public void printAllRoboPetNames() {
 		System.out.println("Here are the current robotic pets in the shelter:");
 		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
-				System.out.println(currentPets.getUserRobotName());
+				System.out.println(currentPets.getUserPetRobotName());
 			
 		}
 	}
 	
+	public void giveATreat(VirtualPet pet) {
+		this.giveATreat(pet);
+	}
+//	
+//	public void giveATreatByName(String name) {
+//		for(int t = 1; t < this.getVirtualPets.size(); t++) {
+//			VirtualPet currentPet = new VirtualPet();
+//			currentPet = this.virtualPets.get(t);
+//			if(currentPet.getUserPetName().equalsIgnoreCase(name)) {
+//				this.virtualPets.giveTreat(t);
+//			}
+//			
+//		}
+//	}
+	
 	public void adoptPet(VirtualPet pet) {
 		this.virtualPets.remove(pet);
 	}
+	
 	
 	public void adoptPetByName(String name) {
 		for(int x = 0; x < this.virtualPets.size(); x++) {
@@ -50,7 +66,22 @@ public class VirtualPetShelter {
 			currentPet = this.virtualPets.get(x);
 			if(currentPet.getUserPetName().equalsIgnoreCase(name)) {
 				this.virtualPets.remove(x);
+			}	
+		}
+	}
+	
+	public void adoptRoboPets(VirtualPetRobots pet) {
+		this.robotPets.remove(pet);
+	}
+	
+	public void adoptPetByRobotName(String name) {
+		for(int r = 0; r < this.robotPets.size(); r++) {
+			VirtualPetRobots currentPets = new VirtualPetRobots();
+			currentPets = this.robotPets.get(r);
+			if(currentPets.getUserPetRobotName().equalsIgnoreCase(name)) {
+				this.robotPets.remove(r);
 			}
+			
 		}
 	}
 	
@@ -164,9 +195,24 @@ public class VirtualPetShelter {
 		return false;
 	}
 	
+	public boolean makeAllBoredomTickReset() {
+		for (VirtualPet currentPet : getVirtualPets()) {
+			if(currentPet.isNeedingPlay() == true) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public void makeAllPetsTick() {
 		for (VirtualPet currentPet : getVirtualPets()) {
 			currentPet.tick();
+		}
+	}
+	
+	public void makeAllPetBoredReset() {
+		for (VirtualPet currentPet : getVirtualPets()) {
+			currentPet.resetBored();
 		}
 	}
 	

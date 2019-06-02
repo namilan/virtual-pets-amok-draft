@@ -141,9 +141,24 @@ public class VirtualPetsAmokApp {
 				ronnysPlayHouse.makeAllPetsTick();
 			}
 		break;
+//		case 8:
+//				System.out.println("Which pet would you like to give a treat to today?");
+//				input.nextLine();
+//				String nameOrganic = input.nextLine();
+//				System.out.println("Please provide the pet a treat.");
+//				String treat = input.nextLine();
+//				ronnysPlayHouse.printAllPetNames();
+//			if(ronnysPlayHouse.arePetsGettingATreat()) {
+//				System.out.println("You gave your pet a treat!");
+//				ronnysPlayHouse.makeAllPetsTick();
+//			} else {
+//				System.out.println("They didn't want a treat? First time for everything.");
+//				ronnysPlayHouse.makeAllPetsTick();
+//			}
 		case 9:
 			if(ronnysPlayHouse.isNeedingPlay()) {
 				System.out.println("You played with all your pets!");
+				ronnysPlayHouse.makeAllPetBoredReset();
 				ronnysPlayHouse.makeAllPetsTick();
 			} else {
 				System.out.println("They didn't want to play afterall.");
@@ -154,22 +169,27 @@ public class VirtualPetsAmokApp {
 		case 10:
 				System.out.println("Please choose a pet that you would like to adopt?");
 				ronnysPlayHouse.printAllPetNames();
+				roboInPlayhouse.printAllRoboPetNames();
 				System.out.println("Please enter their name here. ");
 				input.nextLine();
 				String adoptPet = input.nextLine();
+				String adoptRoboPet = input.nextLine();
 				ronnysPlayHouse.adoptPetByName(adoptPet);
+				roboInPlayhouse.adoptPetByRobotName(adoptRoboPet);
 				System.out.println("You have adopted your pet. Please take great care of them!");
 				System.out.println("Remaining pets in the shelter as follows:");
 				ronnysPlayHouse.printAllPetNames();
+				roboInPlayhouse.printAllRoboPetNames();
 		break;
 		case 11:
-				System.out.println("Please provide the name of the pet to admit today.");
+				System.out.println("Do you have a fluffy pet you would like to admit today?");
+				System.out.println("If so, what is their name?");
 				input.nextLine();
 				String name = input.nextLine();
 				System.out.println("Please provide the type of pet you are admitting.");
 				String type = input.nextLine();
 				ronnysPlayHouse.admitPetByName(name, type);
-				System.out.println("We will take great care of your critter.");
+				System.out.println("We will take great care of your floofs.");
 		break;
 		case 12:
 			System.out.println("Nobody likes a quitter...");

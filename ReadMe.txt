@@ -150,4 +150,14 @@ Added areDogsNeedingWalked to VPShelter
 Added sout line to case 7: in VPAmok
 	* "Lets take the floof dogs for a walk!"
 	* "Doggos enjoyed the walk! Good job!"
-
+Adding Case 8 in VPAmok
+	* Added a treat function (giveATreat())
+	* created a String for petNamesCurrent = 	  input.nextLine()
+	* nameOrganic input
+	* arePetsGettingATreat
+	* ticks for makeAllPetsTick
+Adding petNamesCurrent in VPShelter
+Added the adopt function for the Robots in VPAmok
+	* added petNamesCurrent ( currently in shelter )
+	* able to import robot pets and take robots out of
+	  the menu. 

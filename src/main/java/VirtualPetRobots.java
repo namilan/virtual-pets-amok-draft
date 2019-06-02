@@ -18,14 +18,14 @@ public class VirtualPetRobots {
 		
 	}
 	
-	public VirtualPetRobots(String userRobotName, String userRobotType, int userRobotMaintenance, int userRobotOil, int userRobotHappiness, int userRobotBored) {
-	this.robotName = userRobotName;
+	public VirtualPetRobots(String userPetRobotName, String userRobotType, int userRobotMaintenance, int userRobotOil, int userRobotHappiness, int userRobotBored) {
+	this.robotName = userPetRobotName;
 	this.robotType = userRobotType;
 	this.robotMaintenance = userRobotMaintenance;
 	
 	}
 
-	public String getUserRobotName() {
+	public String getUserPetRobotName() {
 		return this.robotName;
 	}
 	
