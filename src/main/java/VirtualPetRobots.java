@@ -77,20 +77,24 @@ public class VirtualPetRobots {
 		return generator.nextInt(1);
 	}
 	
+	public Collection <VirtualPetRobots> robotValues() {
+		return robotValues();
+	}
+	
 	//Tick Method
 	public void tick() {
 		robotMaintenance += (1 + generateRandom());
-		robotOil -= (1 + generateRandom());
+		robotOil += (1 + generateRandom());
 		robotHappiness += (1 + generateRandom());
 		robotBored += (1 + generateRandom());
 	}
 	
 	//Tick Method Reset
 	public void tickReset() {
-		robotMaintenance = 23;
-		robotOil = 50;
+		robotMaintenance = 0;
+		robotOil = 0;
 		robotHappiness = 50;
-		robotBored = 50;
+		robotBored = 0;
 	}
 	
 	boolean isRobotAlive() {

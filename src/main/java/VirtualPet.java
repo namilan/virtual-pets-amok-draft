@@ -14,7 +14,8 @@ public class VirtualPet {
 	protected int bored = 50;
 	protected int clean = 25;
 	protected int soil = 50;
-	protected int litterBox = 25;
+	protected int catLitterBox = 25;
+	protected int walkDog = 25;
 	protected int treat = 1;
 	protected int adopt = 1;
 	protected int admit = 1;
@@ -23,7 +24,7 @@ public class VirtualPet {
 		
 	}
 	
-	public VirtualPet(String userPetName, String userPetId, int userPetHealth, int Hunger, int Thirst, int bored, int clean) {
+	public VirtualPet(String userPetName, String userPetId, int userPetHealth, int Hunger, int Thirst, int bored, int clean, int catLitterBox) {
 		this.name = userPetName;
 		this.type = userPetId;
 		this.health = userPetHealth;
@@ -72,11 +73,15 @@ public class VirtualPet {
 	}
 	
 	public int getUserCatLitterBox() {
-		return this.litterBox;
+		return this.catLitterBox;
+	}
+	
+	public int getUserWalkDog() {
+		return this.walkDog;
 	}
 	
 	public boolean isHungry() {
-		return hunger <= 50;
+		return hunger >= 50;
 	}
 	
 	public boolean isTreat() {
@@ -84,15 +89,15 @@ public class VirtualPet {
 	}
 	
 	public boolean isFull() {
-		return hunger >= 50;
+		return hunger <= 50;
 	}
 	
 	public boolean isThirsty() {
-		return thirst <=50;
+		return thirst >=50;
 	}
 	
 	public boolean isNotThirsty() {
-		return thirst >=50;
+		return thirst <=50;
 	}
 	
 	public boolean isNeedingPlay() {
@@ -112,7 +117,7 @@ public class VirtualPet {
 	}
 	
 	public boolean isClean() {
-		return clean == 25;
+		return clean >= 25;
 	}
 	
 	public boolean isNotClean() {
@@ -120,11 +125,19 @@ public class VirtualPet {
 	}
 	
 	public boolean isLitterBoxClean() {
-		return litterBox == 25;
+		return catLitterBox >= 25;
 	}
 	
 	public boolean isLitterBoxNotClean() {
-		return litterBox <=25;
+		return catLitterBox <=25;
+	}
+	
+	public boolean isDogNeedingWalked() {
+		return walkDog <=25;
+	}
+	
+	public boolean isDogNeedingBreak() {
+		return walkDog >=25;
 	}
 	
 	public boolean isAdopted() {
@@ -148,21 +161,29 @@ public class VirtualPet {
 	
 	public void tick() {
 	hunger += (1 + generateRandom());
-	thirst -= (1 + generateRandom());
+	thirst += (1 + generateRandom());
 	play -= (1 + generateRandom());
 	bored += (1 + generateRandom());
-	clean += (1 + generateRandom());
-	litterBox += (3 + generateRandom());
+	clean += (4 + generateRandom());
+	catLitterBox += (3 + generateRandom());
+	walkDog += (3 + generateRandom());
 	}
 	
 	//Tick Rest
-	public void reset() {
-		hunger = 50;
-		thirst = 50;
-		play = 50;
-		bored = 50;
-		clean = 50;
-		litterBox = 25;
+	public void resetClean() {
+		clean = 0;
+	}
+	
+	public void resetHungerTick() {
+		hunger = 0;
+	}
+	
+	public void resetThirstTick() {
+		thirst = 0;
+	}
+	
+	public void resetCleanLitter() {
+		catLitterBox = 0;
 	}
 
 	public Collection<VirtualPet> values() {
@@ -180,7 +201,7 @@ public class VirtualPet {
 	}
 	
 	boolean isSoiled() {
-		if (clean < 100 && litterBox < 100 ) {
+		if (clean < 100 && catLitterBox < 100 ) {
 			return true;
 		} else {
 			return false;

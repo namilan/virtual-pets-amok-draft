@@ -10,7 +10,7 @@ public class VirtualPetTest {
 	private int userPetHealth;
 	private int userPetHunger;
 
-	VirtualPet underTest = new VirtualPet (userPetName, userPetId, userPetHealth, userPetHunger, 0, 0, 0);
+	VirtualPet underTest = new VirtualPet (userPetName, userPetId, userPetHealth, userPetHunger, 0, 0, 0, 0);
 	
 	@Test
 	public void doesPetNameGetterWork () {
@@ -74,9 +74,16 @@ public class VirtualPetTest {
 		assertEquals(50, underTest.getUserPetSoil());
 	}
 	
+	@Test
 	public void doesUserLitterBoxGetterWork() {
-		underTest.litterBox = 25;
+		underTest.catLitterBox = 25;
 		assertEquals(25, underTest.getUserCatLitterBox());
+	}
+	
+	@Test
+	public void doesUserWalkDogGetterWork() {
+		underTest.walkDog = 25;
+		assertEquals(25, underTest.getUserWalkDog());
 	}
 	
 	@Test
@@ -147,14 +154,26 @@ public class VirtualPetTest {
 	
 	@Test
 	public void isLitterBoxCLean() {
-		underTest.litterBox = 25;
+		underTest.catLitterBox = 25;
 		assertTrue(underTest.isClean());
 	}
 	
 	@Test
 	public void isLitterBoxNotClean() {
-		underTest.litterBox = 25;
+		underTest.catLitterBox = 25;
 		assertTrue(underTest.isNotClean());
+	}
+	
+	@Test
+	public void isDogNeedingWalked() {
+		underTest.walkDog = 25;
+		assertTrue(underTest.isDogNeedingWalked());
+	}
+	
+	@Test
+	public void isDogNotNeedingWalked() {
+		underTest.walkDog = 25;
+		assertTrue(underTest.isDogNeedingWalked());
 	}
 	
 	@Test
@@ -212,6 +231,13 @@ public class VirtualPetTest {
 	}
 	
 	@Test
+	public void isWalkDogTicking() {
+		underTest.walkDog = 25;
+		underTest.getUserWalkDog();
+		assertEquals(25, underTest.getUserWalkDog());
+	}
+	
+	@Test
 	public void tickResetHunger() {
 		underTest.hunger = 50;
 		underTest.getUserPetHunger();
@@ -248,9 +274,16 @@ public class VirtualPetTest {
 	
 	@Test
 	public void tickResetLitterBox() {
-		underTest.litterBox = 25;
+		underTest.catLitterBox = 25;
 		underTest.getUserCatLitterBox();
 		assertEquals(25, underTest.getUserCatLitterBox());
+	}
+	
+	@Test
+	public void tickResetWalkDog() {
+		underTest.walkDog = 25;
+		underTest.getUserWalkDog();
+		assertEquals(25, underTest.getUserWalkDog());
 	}
 	
 
