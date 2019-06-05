@@ -175,5 +175,9 @@ Added RobotCat Class
 	* extends VirtualPet implements VirtualPetRobots
 Added RobotDog Class
 	* extends VirtualPet implements VirtualPetRobots
-Moving to a Map instead of an Array
-	* changing lists to maps
+Removed VirtualPetRobots Class
+	* Made interface Robotic instead
+Interface Robitic Pet
+	* ONLY Has the robotic features for BOTH
+	  RobotCat/RobotDog
+Fixing VirtualPetShelter.Java

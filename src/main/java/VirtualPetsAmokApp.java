@@ -12,7 +12,7 @@ public class VirtualPetsAmokApp {
 		VirtualPetShelter ronnysPlayHouse = new VirtualPetShelter();
 		VirtualPetShelter roboInPlayhouse = new VirtualPetShelter();
 		List<VirtualPet> petsInPlayhouse = ronnysPlayHouse.getVirtualPets();
-		List<VirtualPetRobot> robotInPlayhouse = roboInPlayhouse.getVirtualRobotPets();
+		List<VirtualPet> robotInPlayhouse = roboInPlayhouse.getVirtualPets();
 		 
 		
 		VirtualPet roofus = new VirtualPet("Roofus", "Dog", 50, 50, 50, 50, 100, 0);
