@@ -4,7 +4,7 @@ import java.util.List;
 public class VirtualPetShelter {
 	
 	List<VirtualPet> virtualPets = new ArrayList<>();
-	List<VirtualPetRobots> robotPets = new ArrayList<>();
+	List<VirtualPetRobot> robotPets = new ArrayList<>();
 	
 	
 	
@@ -12,7 +12,7 @@ public class VirtualPetShelter {
 		return virtualPets;
 	}
 	
-	public List <VirtualPetRobots> getVirtualRobotPets(){
+	public List <VirtualPetRobot> getVirtualRobotPets(){
 		return robotPets;
 	}
 	
@@ -34,7 +34,7 @@ public class VirtualPetShelter {
 	
 	public void printAllRoboPetNames() {
 		System.out.println("Here are the current robotic pets in the shelter:");
-		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+		for (Robotic currentPets : getVirtualRobotPets()) {
 				System.out.println(currentPets.getUserPetRobotName());
 			
 		}
@@ -70,13 +70,13 @@ public class VirtualPetShelter {
 		}
 	}
 	
-	public void adoptRoboPets(VirtualPetRobots pet) {
+	public void adoptRoboPets(VirtualPetRobot pet) {
 		this.robotPets.remove(pet);
 	}
 	
 	public void adoptPetByRobotName(String name) {
 		for(int r = 0; r < this.robotPets.size(); r++) {
-			VirtualPetRobots currentPets = new VirtualPetRobots();
+			Robotic currentPets = new VirtualPetRobot();
 			currentPets = this.robotPets.get(r);
 			if(currentPets.getUserPetRobotName().equalsIgnoreCase(name)) {
 				this.robotPets.remove(r);
@@ -94,12 +94,12 @@ public class VirtualPetShelter {
 		this.virtualPets.add(newPet);
 		}
 	
-	public boolean isAdmitRobot(VirtualPetRobots pet) {
+	public boolean isAdmitRobot(VirtualPetRobot pet) {
 		return this.robotPets.add(pet);
 	}
 	
 	public void admitPetByRobotName(String robotName) {
-		VirtualPetRobots newPets = new VirtualPetRobots( robotName, " " , 23, 50, 50, 50);
+		VirtualPetRobot newPets = new VirtualPetRobot( robotName, " " , 23, 50, 50, 50);
 		this.robotPets.add(newPets);
 	}
 	
@@ -123,7 +123,7 @@ public class VirtualPetShelter {
 	}
 	
 	public boolean areRobotsNeedingOil() {
-		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+		for (Robotic currentPets : getVirtualRobotPets()) {
 			if(currentPets.robotOil() == true) {
 				return true;
 			}
@@ -132,7 +132,7 @@ public class VirtualPetShelter {
 	}
 	
 	public boolean areRobotsNeedingMaintenance() {
-		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+		for (Robotic currentPets : getVirtualRobotPets()) {
 			if(currentPets.robotMaintenance() == true) {
 				return true;
 			}
@@ -252,19 +252,19 @@ public class VirtualPetShelter {
 	}
 	
 	public void makeAllRoboPetsTick() {
-			for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+			for (Robotic currentPets : getVirtualRobotPets()) {
 				currentPets.tick();
 			}
 	}
 	
 	public void makeAllRoboPetsTickOilReset() {
-		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+		for (Robotic currentPets : getVirtualRobotPets()) {
 			currentPets.tickResetOil();
 		}
 	}
 	
 	public void makeRoboMaintenanceReset() {
-		for (VirtualPetRobots currentPets : getVirtualRobotPets()) {
+		for (Robotic currentPets : getVirtualRobotPets()) {
 			currentPets.tickRoboMaint();
 		}
 	}

@@ -1,4 +1,4 @@
 
-public class RobotDog extends VirtualPet implements VirtualPetRobots {
+public class RobotDog extends VirtualPet implements Robotic {
 
 }

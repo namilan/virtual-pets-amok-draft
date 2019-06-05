@@ -1,7 +1,7 @@
 import java.util.Collection;
 import java.util.Random;
 
-public class VirtualPetRobots {
+public class VirtualPetRobot implements Robotic {
 	
 	private Random generator = new Random();
 	
@@ -14,11 +14,11 @@ public class VirtualPetRobots {
 	protected int robotAdopt = 1; 
 	protected int robotAdmit = 1;
 	
-	public VirtualPetRobots() {
+	public VirtualPetRobot() {
 		
 	}
 	
-	public VirtualPetRobots(String userPetRobotName, String userRobotType, int userRobotMaintenance, int userRobotOil, int userRobotHappiness, int userRobotBored) {
+	public VirtualPetRobot(String userPetRobotName, String userRobotType, int userRobotMaintenance, int userRobotOil, int userRobotHappiness, int userRobotBored) {
 	this.robotName = userPetRobotName;
 	this.robotType = userRobotType;
 	this.robotMaintenance = userRobotMaintenance;
@@ -85,7 +85,7 @@ public class VirtualPetRobots {
 		return generator.nextInt(1);
 	}
 	
-	public Collection <VirtualPetRobots> robotValues() {
+	public Collection <VirtualPetRobot> robotValues() {
 		return robotValues();
 	}
 	

@@ -29,7 +29,7 @@ public class VirtualPetShelterTest {
 	
 	@Test
 	public void shouldReturnRobotPetName() {
-		VirtualPetRobots underTest = new VirtualPetRobots("", "", maintenance, oil, happy, bored);
+		Robotic underTest = new VirtualPetRobot("", "", maintenance, oil, happy, bored);
 		String userPetName = underTest.getUserPetRobotName();
 		assertEquals("", userPetName);
 	}

@@ -175,3 +175,5 @@ Added RobotCat Class
 	* extends VirtualPet implements VirtualPetRobots
 Added RobotDog Class
 	* extends VirtualPet implements VirtualPetRobots
+Moving to a Map instead of an Array
+	* changing lists to maps

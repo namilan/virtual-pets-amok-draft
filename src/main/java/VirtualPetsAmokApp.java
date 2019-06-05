@@ -12,16 +12,16 @@ public class VirtualPetsAmokApp {
 		VirtualPetShelter ronnysPlayHouse = new VirtualPetShelter();
 		VirtualPetShelter roboInPlayhouse = new VirtualPetShelter();
 		List<VirtualPet> petsInPlayhouse = ronnysPlayHouse.getVirtualPets();
-		List<VirtualPetRobots> robotInPlayhouse = roboInPlayhouse.getVirtualRobotPets();
+		List<VirtualPetRobot> robotInPlayhouse = roboInPlayhouse.getVirtualRobotPets();
 		 
 		
 		VirtualPet roofus = new VirtualPet("Roofus", "Dog", 50, 50, 50, 50, 100, 0);
 		petsInPlayhouse.add(roofus);
 		VirtualPet kitty = new VirtualPet("Kitty", "Cat", 50, 50, 50, 50, 0, 25);
 		petsInPlayhouse.add(kitty);
-		VirtualPetRobots bork = new VirtualPetRobots("Bork", "Robot Dog", 23, 50, 50, 50);
+		VirtualPetRobot bork = new VirtualPetRobot("Bork", "Robot Dog", 23, 50, 50, 50);
 		robotInPlayhouse.add(bork);
-		VirtualPetRobots cookies = new VirtualPetRobots("Cookies", "Robot Cat", 23, 50, 50, 50);
+		VirtualPetRobot cookies = new VirtualPetRobot("Cookies", "Robot Cat", 23, 50, 50, 50);
 		robotInPlayhouse.add(cookies);
 		
 	
@@ -47,7 +47,7 @@ public class VirtualPetsAmokApp {
 		System.out.println("\nName\t|Maintenance\t|Oil\t|Happiness");
 		System.out.println("--------|---------------|-------|-------");
 		
-		for (VirtualPetRobots currentPets : roboInPlayhouse.getVirtualRobotPets()) {
+		for (VirtualPetRobot currentPets : roboInPlayhouse.getVirtualRobotPets()) {
 			System.out.println(currentPets.robotName + "\t|" + currentPets.robotMaintenance + "\t \t|" + currentPets.robotOil + "\t|"
 					+ currentPets.robotHappiness);
 			

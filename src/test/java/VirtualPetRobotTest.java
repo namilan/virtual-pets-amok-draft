@@ -3,14 +3,14 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class VirtualPetRobotsTest {
+public class VirtualPetRobotTest {
 
 		private String userPetRobotName;
 		private String userPetRobotType;
 		private int userRobotMaintenance;
 		private int userRobotOil;
 		
-		VirtualPetRobots underTest = new VirtualPetRobots (userPetRobotName, userPetRobotType, userRobotMaintenance, userRobotOil, 0, 0);
+		VirtualPetRobot underTest = new VirtualPetRobot (userPetRobotName, userPetRobotType, userRobotMaintenance, userRobotOil, 0, 0);
 		
 		@Test
 		public void doesRobotNameGetterWork() {
