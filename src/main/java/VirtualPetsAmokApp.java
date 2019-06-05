@@ -162,7 +162,7 @@ public class VirtualPetsAmokApp {
 //				ronnysPlayHouse.makeAllPetBoredReset();
 //				ronnysPlayHouse.makeAllPetsTick();
 //			} else {
-//				System.out.println("They didn't want to play afterall.");
+//				System.out.println("They didn't want to play after-all.");
 //				ronnysPlayHouse.makeAllPetsTick();
 //			}
 //			

@@ -152,7 +152,8 @@ Added sout line to case 7: in VPAmok
 	* "Doggos enjoyed the walk! Good job!"
 Adding Case 8 in VPAmok
 	* Added a treat function (giveATreat())
-	* created a String for petNamesCurrent = 	  input.nextLine()
+	* created a String for petNamesCurrent =
+	  input.nextLine()
 	* nameOrganic input
 	* arePetsGettingATreat
 	* ticks for makeAllPetsTick
@@ -161,3 +162,16 @@ Added the adopt function for the Robots in VPAmok
 	* added petNamesCurrent ( currently in shelter )
 	* able to import robot pets and take robots out of
 	  the menu. 
+Added a couple of text lines to the Case 11 menu. 
+Adding case 12 to admit robot pets. 
+
+06/04/19 : 
+
+Added Cat Class
+	* extends VirtualPet
+Added Dog Class
+	* extends VirtualPet
+Added RobotCat Class
+	* extends VirtualPet implements VirtualPetRobots
+Added RobotDog Class
+	* extends VirtualPet implements VirtualPetRobots

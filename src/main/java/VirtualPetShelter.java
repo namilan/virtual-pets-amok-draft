@@ -195,6 +195,8 @@ public class VirtualPetShelter {
 		return false;
 	}
 	
+	// Tick Resets and Tick Methods ----------------------------------------
+	
 	public boolean makeDogsWalkTickReset() {
 		for (VirtualPet currentPet : getVirtualPets()) {
 			if(currentPet.isDogNeedingWalked() == true) {
@@ -266,6 +268,8 @@ public class VirtualPetShelter {
 			currentPets.tickRoboMaint();
 		}
 	}
+	
+	// Tick Resets and Tick Methods Ends ------------------------------------
 	
 	public boolean areAlive() {
 		for (VirtualPet currentPet : getVirtualPets()) {

@@ -5,18 +5,18 @@ import org.junit.Test;
 
 public class VirtualPetRobotsTest {
 
-		private String userRobotName;
-		private String userRobotType;
+		private String userPetRobotName;
+		private String userPetRobotType;
 		private int userRobotMaintenance;
 		private int userRobotOil;
 		
-		VirtualPetRobots underTest = new VirtualPetRobots (userRobotName, userRobotType, userRobotMaintenance, userRobotOil, 0, 0);
+		VirtualPetRobots underTest = new VirtualPetRobots (userPetRobotName, userPetRobotType, userRobotMaintenance, userRobotOil, 0, 0);
 		
 		@Test
 		public void doesRobotNameGetterWork() {
 			String userRobotName = "";
 			underTest.robotName = userRobotName;
-			assertEquals("", underTest.getUserRobotName());
+			assertEquals("", underTest.getUserPetRobotName());
 		}
 		
 		@Test
